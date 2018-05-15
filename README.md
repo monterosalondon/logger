@@ -1,4 +1,4 @@
-# MLogger [![Downloads](https://img.shields.io/npm/dm/@monterosa/logger.svg)](https://www.npmjs.com/package/@monterosa/logger) [![License](https://img.shields.io/npm/l/@monterosa/logger.svg)](https://github.com/monterosalondon/logger) [![ESLint code style](https://img.shields.io/badge/code_style-ESLint-4b33c3.svg)](https://github.com/eslint/eslint) [![GitHub stars](https://img.shields.io/github/stars/monterosalondon/logger.svg?style=social&label=Stars)](https://github.com/monterosalondon/logger)
+# MLogger [![Downloads](https://img.shields.io/npm/dm/@monterosa/logger.svg)](https://www.npmjs.com/package/@monterosa/logger) [![License](https://img.shields.io/npm/l/@monterosa/logger.svg)](https://github.com/monterosalondon/logger/LICENSE.md) [![ESLint code style](https://img.shields.io/badge/code_style-ESLint-4b33c3.svg)](https://github.com/eslint/eslint) [![GitHub stars](https://img.shields.io/github/stars/monterosalondon/logger.svg?style=social&label=Stars)](https://github.com/monterosalondon/logger)
 
 > The colorful tool for the NodeJS and browsers logs
 
