@@ -1,0 +1,45 @@
+{
+  "name": "@monterosalondon/logger",
+  "version": "0.0.0",
+  "description": "The colorful tool for the NodeJS and browsers logs",
+  "main": "dist/node.js",
+  "browser": "dist/browser.js",
+  "engines": {
+    "node": ">=6.9",
+    "browsers": "ie >= 11"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:node && npm run build:browser",
+    "build:node": "rollup -c --environment NODE_ENV:production,BABEL_ENV:node",
+    "build:browser": "rollup -c --environment NODE_ENV:production,BABEL_ENV:browser",
+    "lint": "eslint . --ext .js",
+    "clean": "del dist",
+    "format": "prettier-eslint --write ./src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monterosalondon/logger.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monterosalondon/logger/issues"
+  },
+  "homepage": "https://github.com/monterosalondon/logger#readme",
+  "dependencies": {
+    "colors": "^1.2.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.1",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4"
+  }
+}

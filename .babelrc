@@ -1,0 +1,27 @@
+{
+  "env": {
+    "node": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false,
+            "targets": { "node": "6.9" }
+          }
+        ]
+      ]
+    },
+    "browser": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false,
+            "targets": { "browsers": ["last 2 versions", "ie >= 11"] }
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": ["external-helpers"]
+}
