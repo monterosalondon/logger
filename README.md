@@ -17,18 +17,19 @@ setLevel(LEVELS.DEBUG); // LEVELS.INFO by default
 
 const logger = getLogger('prefix');
 
-logger.info("this is '%s' level", 'info'); // {"@level":"info","@timestamp":"2018-05-15T09:09:11.781Z","@prefix":"prefix","@message":"this is 'info' level","@splat":["info"]}
+logger.info("this is '%s' level", 'info'); // {"@name": "base", "@level":"info","@timestamp":"2018-05-15T09:09:11.781Z","@prefix":"prefix","@message":"this is 'info' level","@splat":["info"]}
 
-logger.warn("this is %j", { level: 'info' }); // {"@level":"warn","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"this is {\"level\":\"info\"}","@splat":[{"level":"info"}]}
+logger.warn("this is %j", { level: 'info' }); // {"@name": "base", "@level":"warn","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"this is {\"level\":\"info\"}","@splat":[{"level":"info"}]}
 
-logger.error("Fatal error %s", new Error('some error')); // {"@level":"error","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"Fatal error Error: some error","@splat":[{}]}
+logger.error("Fatal error %s", new Error('some error')); // {"@name": "base", "@level":"error","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"Fatal error Error: some error","@splat":[{}]}
 
-logger.debug("userName=%s, userData=%j", 'z4o4z', data); // {"@level":"error","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"userName=z4o4z, userData={...}","@splat":['z4o4z', {...}]}
+logger.debug("userName=%s, userData=%j", 'z4o4z', data); // {"@name": "base", "@level":"error","@timestamp":"2018-05-15T09:09:11.782Z","@prefix":"prefix","@message":"userName=z4o4z, userData={...}","@splat":['z4o4z', {...}]}
 ```
 
 ## API
 
 * [`LEVELS`](#levels)
+* [`setName`](#setName)
 * [`setLevel`](#setLevel)
 * [`getLogger`](#getLogger)
 * [`setTransport`](#setTransport)
@@ -44,6 +45,14 @@ LEVELS.INFO // info
 LEVELS.DEBUG // debug
 LEVELS.VERBOSE // verbose
 LEVELS.SILLY // silly
+```
+
+### `setName`
+
+The method to set log name. Useful when you are shared code between processes and want to specify for which process the log was called. By default name is `base`. Can be called in runtime.
+
+```
+setName('some name');
 ```
 
 ### `setLevel`

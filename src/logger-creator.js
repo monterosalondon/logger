@@ -2,6 +2,7 @@ import { LEVELS, LEVELS_PRIORITIES } from './helpers';
 
 export default class LoggerCreator {
   constructor(logWithColors) {
+    this.name = 'base';
     this.level = LEVELS.INFO;
     this.transport = () => {};
     this.logWithColors = logWithColors;
@@ -22,6 +23,10 @@ export default class LoggerCreator {
 
   setLevel(level) {
     this.level = level;
+  }
+
+  setName(name) {
+    this.name = name;
   }
 
   setTransport(transport = () => {}) {
@@ -46,6 +51,7 @@ export default class LoggerCreator {
       });
 
       const logStashFormat = {
+        '@name': name,
         '@level': level,
         '@timestamp': new Date(),
         '@prefix': prefix,
