@@ -21,6 +21,7 @@ const loggerCreator = new LoggerCreator(logWithColors);
 
 export { LEVELS } from './helpers';
 
+export const setName = loggerCreator.setName.bind(loggerCreator);
 export const setLevel = loggerCreator.setLevel.bind(loggerCreator);
 export const getLogger = loggerCreator.getLogger.bind(loggerCreator);
 export const setTransport = loggerCreator.setTransport.bind(loggerCreator);
