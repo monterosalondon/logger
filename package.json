@@ -9,6 +9,7 @@
     "browsers": "ie >= 11"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "build": "npm run clean && npm run build:node && npm run build:browser",
     "build:node": "rollup -c --environment NODE_ENV:production,BABEL_ENV:node",
     "build:browser": "rollup -c --environment NODE_ENV:production,BABEL_ENV:browser",
