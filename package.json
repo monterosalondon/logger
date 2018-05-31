@@ -1,6 +1,6 @@
 {
   "name": "@monterosa/logger",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "The colorful tool for the NodeJS and browsers logs",
   "main": "dist/node.js",
   "browser": "dist/browser.js",
